@@ -11,29 +11,33 @@
 ⍉
 Data ←
 
-# decouple
-°⊟ Data
-# Difference Score
-# sort both
-∩⍆
-# take pairwise absolute difference
-⌵-
-# add total distance
-/+
+# minimized
+/+⌵-∩⍆°⊟ Data
+/+×≡/+⊞≍’°⊟ Data
 
-# Similarity Score
-# go back to input data
-°⊟ Data
+# # decouple
+# °⊟ Data
+# # Difference Score
+# # sort both
+# ∩⍆
+# # take pairwise absolute difference
+# ⌵-
+# # add total distance
+# /+
 
-# for each element of top of stack,
-# match with each element of the second to top of stack
-# returns a [N M] where n is length of top of stack
-# and m the length of the second to top
-⊞≍’
+# # Similarity Score
+# # go back to input data
+# °⊟ Data
 
-# sum together each row
-≡/+
-# multiply pairwise
-×
-# sum
-/+
+# # for each element of top of stack,
+# # match with each element of the second to top of stack
+# # returns a [N M] where n is length of top of stack
+# # and m the length of the second to top
+# ⊞≍’
+
+# # sum together each row
+# ≡/+
+# # multiply pairwise
+# ×
+# # sum
+# /+
