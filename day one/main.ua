@@ -1,7 +1,7 @@
 # Experimental!
 # read file and convert to [2 n]
 # &fras "sample.txt"
-&fras "data.txt"
+&fras "sample.txt"
 
 # split by newline
 ⊸≠@\n
@@ -11,33 +11,33 @@
 ⍉
 Data ←
 
-# minimized
-/+⌵-∩⍆°⊟ Data
-/+×≡/+⊞≍’°⊟ Data
+# # minimized
+# /+⌵-∩⍆°⊟ Data
+# /+×≡/+⊞≍’°⊟ Data
 
-# # decouple
-# °⊟ Data
-# # Difference Score
-# # sort both
-# ∩⍆
-# # take pairwise absolute difference
-# ⌵-
-# # add total distance
-# /+
+# decouple
+°⊟ Data
+# Difference Score
+# sort both
+∩⍆
+# take pairwise absolute difference
+⌵-
+# add total distance
+/+
 
-# # Similarity Score
-# # go back to input data
-# °⊟ Data
+# Similarity Score
+# go back to input data
+°⊟ Data
 
-# # for each element of top of stack,
-# # match with each element of the second to top of stack
-# # returns a [N M] where n is length of top of stack
-# # and m the length of the second to top
-# ⊞≍’
+# for each element of top of stack,
+# match with each element of the second to top of stack
+# returns a [N M] where n is length of top of stack
+# and m the length of the second to top
+⊞≍’
 
-# # sum together each row
-# ≡/+
-# # multiply pairwise
-# ×
-# # sum
-# /+
+# sum together each row
+≡/+
+# multiply pairwise
+×
+# sum
+/+
